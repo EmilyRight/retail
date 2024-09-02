@@ -474,22 +474,7 @@
                 <div class="swiper-slide">
                   <div class="photo">
                     <!-- <a
-                      href="img/page/foto/foto6.jpg?as=webp"
-                      class="photo__big js-showbig js-gtm-event"
-                      data-event="show_bigfoto"
-                      data-section="section-photoslider"
-                      target="_blank">
-                    </a> -->
-                    <img
-                      src="img/page/foto/foto6.jpg?as=webp&width=400"
-                      class="foto-thumb"
-                      alt="" />
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="photo">
-                    <!-- <a
-                      href="img/page/foto/foto7.jpg?as=webp"
+                      href="img/page/foto/foto5.jpg?as=webp"
                       class="photo__big js-showbig js-gtm-event"
                       data-event="show_bigfoto"
                       data-section="section-photoslider"
@@ -498,22 +483,8 @@
                     <img
                       src="img/page/foto/foto7.jpg?as=webp&width=400"
                       class="foto-thumb"
-                      alt="" />
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="photo">
-                    <!-- <a
-                      href="img/page/foto/foto8.jpg?as=webp"
-                      class="photo__big js-showbig js-gtm-event"
-                      data-event="show_bigfoto"
-                      data-section="section-photoslider"
-                      target="_blank">
-                    </a> -->
-                    <img
-                      src="img/page/foto/foto8.jpg?as=webp&width=400"
-                      class="foto-thumb"
-                      alt="" />
+                      alt=""
+                      loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -820,18 +791,17 @@
             </div>
           </div>
         </section>
-      </div>
-      <section class="section section--footer">
-        <div class="section-layer">
-          <div class="copyrights">
-            18+ &copy; t2 Россия, <span class="current-year"></span>.
+        <section class="section section--footer">
+          <div class="section-layer">
+            <div class="copyrights">
+              18+ &copy; t2 Россия, <span class="current-year"></span>.
+            </div>
           </div>
+        </section>
+      </div>
 
-        </div>
-      </section>
-
-    <!-- MODAL-->
-    <!-- <div class="popup-modal popup-modal-hidden">
+      <!-- MODAL-->
+      <!-- <div class="popup-modal popup-modal-hidden">
       <div class="modal-box" id="tooltip">
         <div class="modal-box__header">
           <div class="close">
@@ -858,23 +828,24 @@
       </div>
     </div> -->
 
-    <script
-      type="module"
-      src="./js/main.js"
-      defer
-      class="js-inline-main"></script>
-    <!-- GTM-->
-    <script class="js-inline-gtm">
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        let f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-MCDW62TD");
-    </script>
+      <script
+        type="module"
+        src="./js/main.js"
+        defer
+        class="js-inline-main"></script>
+      <!-- GTM-->
+      <script class="js-inline-gtm">
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          let f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-MCDW62TD");
+      </script>
+    </div>
   </body>
 </html>
