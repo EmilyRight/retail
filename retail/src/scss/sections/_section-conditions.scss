@@ -1,0 +1,122 @@
+.conditions {
+  background-color: $color-t2-green;
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  @media (min-width: $mobile-small) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    border-radius: 0px, 0px, 3.2rem, 3.2rem;
+    overflow: hidden;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    @media (min-width: $mobile-small) {
+      gap: 10rem;
+    }
+  }
+  .conditions-list {
+    &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      @media (min-width: $mobile-small) {
+        flex-direction: row;
+        gap: 3.2rem;
+        justify-content: space-between;
+      }
+    }
+    &__item:nth-of-type(2) {
+      @media (min-width: $mobile-small) {
+        .text-content {
+          order: 2;
+        }
+      }
+    }
+  }
+  .item {
+    &__text-content {
+      @media (min-width: $mobile-small) {
+        max-width: 25.5vw;
+      }
+    }
+
+    &__image {
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+      border-radius: 1.6rem;
+      overflow: hidden;
+      @media (min-width: $mobile-small) {
+        width: 65%;
+        border-radius: 3.2rem;
+      }
+      picture {
+        display: block;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    &__title {
+    }
+
+    &__list {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  .text-list {
+    &__item {
+      display: flex;
+      background-color: #fff;
+      padding: 1.2rem;
+      border-radius: 1.6rem;
+      gap: 1.8rem;
+    }
+  }
+  .text-item {
+    &__icon {
+      min-width: 3.2rem;
+      height: 3.2rem;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1.067rem;
+      font-family: $font2;
+    }
+
+    &__text {
+      align-self: center;
+      @media (min-width: $mobile-small) {
+        font-size: 1.6rem;
+        line-height: 1.92rem;
+      }
+    }
+  }
+  .btn {
+    background-color: #000;
+    color: #fff;
+    @media (min-width: $mobile-small) {
+      border-radius: 1.6rem;
+      margin-top: auto;
+    }
+  }
+}

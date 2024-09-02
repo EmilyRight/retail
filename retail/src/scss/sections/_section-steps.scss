@@ -1,0 +1,66 @@
+.steps {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  @media (min-width: $mobile) {
+    padding-bottom: 4rem;
+  }
+  .section-title {
+    margin-bottom: 1.2rem;
+  }
+
+  .steps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    @media (min-width: $mobile) {
+      flex-direction: row;
+      gap: 1.6rem;
+      justify-content: space-between;
+    }
+  }
+  .steps-list {
+    &__item {
+      background-color: $color-white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 1.6rem;
+      padding: 1.2rem;
+      box-shadow: 0px 2px 16px 0px #0000000f, 0px -10px 22px 0px #00000008;
+      height: 14rem;
+      @media (min-width: $mobile) {
+        width: calc(100% / 3);
+        border-radius: 3.2rem;
+        padding: 2.4rem;
+        height: 18rem;
+      }
+    }
+
+    &__icon {
+      // margin-bottom: 1.6rem;
+      border-radius: 1.6rem;
+      width: 4.8rem;
+      height: 4.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: $font2;
+      font-weight: 800;
+      font-size: 2.6rem;
+      line-height: 2.6rem;
+      background-color: $color-t2-green;
+      // @media (min-width: $mobile) {
+      //   margin-bottom: 2.4rem;
+      // }
+    }
+
+    &__title {
+      @include section-title-small;
+
+      @media (min-width: $mobile) {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+    }
+  }
+}

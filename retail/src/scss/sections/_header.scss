@@ -1,0 +1,13 @@
+.header {
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  background-color: #000;
+  &__logo {
+    max-width: 4rem;
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+  }
+}

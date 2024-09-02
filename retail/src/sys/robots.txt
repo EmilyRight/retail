@@ -1,0 +1,11 @@
+User-Agent: *
+Disallow: /options
+Disallow: /mixx-max
+Disallow: /lk
+Disallow: *.woff2
+Disallow: *.woff
+
+Disallow: /src
+Disallow: /*?*
+Disallow: /*%*
+Disallow: /*&*

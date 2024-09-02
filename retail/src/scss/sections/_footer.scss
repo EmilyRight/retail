@@ -1,0 +1,20 @@
+.section--footer {
+  background-color: #000;
+
+  .section-layer {
+    padding: 3.2rem;
+    display: block;
+    text-align: center;
+    color: #808693;
+    font-size: 1rem;
+    line-height: 1.2;
+
+    .text-link {
+      color: #808693;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

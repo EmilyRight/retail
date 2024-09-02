@@ -1,0 +1,124 @@
+.teaser {
+  padding-top: 2.4rem;
+  padding-bottom: 2.4rem;
+  @media (min-width: $mobile-small) {
+    padding-top: 6.2rem;
+    padding-bottom: 4rem;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 76% 21%;
+    grid-template-rows: 23% 30% auto;
+    gap: 1.2rem;
+    min-height: 59rem;
+    @media (min-width: $mobile-small) {
+      grid-template-columns: 82% 17%;
+      grid-template-rows: 30% 31% 28%;
+    }
+  }
+
+  .teaser-grid {
+    &__media {
+      grid-column: 1/2;
+      grid-row: 1/3;
+      border-radius: 2.4rem 0 1.2rem 0;
+      background-image: url("../img/page/teaser-desktop.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+
+      @media (min-width: $mobile-small) {
+        border-radius: 3.6rem 0 1.2rem 0;
+      }
+    }
+
+    &__body {
+      grid-column: 1/3;
+      grid-row: 3/4;
+      background-color: #010101;
+      border-radius: 0 0 2.4rem 2.4rem;
+      @media (min-width: $mobile-small) {
+        grid-column: 1/2;
+        border-radius: 0 1.2rem 0 3.6rem;
+      }
+    }
+
+    &__upper-block {
+      grid-column: 2/3;
+      grid-row: 1/2;
+      background-color: #010101;
+      display: none;
+      @media (min-width: $mobile-small) {
+        display: block;
+        border-radius: 0 3.6rem 0 1.2rem;
+      }
+    }
+
+    &__down-block {
+      grid-column: 2/3;
+      grid-row: 1/3;
+      background-color: $color-t2-green;
+      border-radius: 0 2.4rem 0 1.2rem;
+      @media (min-width: $mobile-small) {
+        grid-row: 2/4;
+        border-radius: 1.2rem 0 3.6rem 0;
+      }
+    }
+  }
+
+  .teaser-body {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem;
+    @media (min-width: $mobile-small) {
+      padding: 2.4rem;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__text {
+      color: #fff;
+      @media (min-width: $mobile-small) {
+        width: 60%;
+        max-width: 50rem;
+      }
+    }
+  }
+
+  .bigtext {
+    @include teaser-title;
+    color: #fff;
+    margin-bottom: 0.8rem;
+  }
+
+  .subline {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-bottom: 2.4rem;
+    @media (min-width: $mobile-small) {
+      @include text-small;
+      line-height: 1.1;
+      margin-bottom: 0;
+    }
+  }
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    @media (min-width: $mobile-small) {
+      max-width: 30%;
+    }
+  }
+  .btn {
+    @include btn;
+    margin: 0;
+    @media (min-width: $mobile-small) {
+      width: 29rem;
+      max-width: 100%;
+      height: fit-content;
+      align-self: flex-end;
+    }
+  }
+}
