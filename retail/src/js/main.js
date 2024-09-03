@@ -16,11 +16,13 @@ document.addEventListener('DOMContentLoaded', () => {
   new WOW().init();
   gtmSet();
   faqOpener();
+  goNextSection();
+  scrollTeaser();
   setCurrentYear();
 
   $body.addEventListener('click', (e) => {
-    const _class = 'teaser-more';
-    const $trg = (e.target.classList.contains(_class)) ? e.target : e.target.closest(`.${_class}`);
+    const className = 'teaser-more';
+    const $trg = (e.target.classList.contains(className)) ? e.target : e.target.closest(`.${className}`);
     if ($trg) {
       const nextSection = $doc.querySelector('.section--about');
       goTo(nextSection);
@@ -77,8 +79,42 @@ function setCurrentYear() {
     span.innerHTML = new Date().getFullYear().toString();
   });
 }
+
 function goTo(el) {
   const offs = 0;
   const y = el.getBoundingClientRect().top + window.scrollY + offs;
   window.scrollTo({ top: y, behavior: 'smooth' }); // element.scrollIntoView();
+}
+
+function scrollTeaser() {
+  const { hash } = window.location;
+  if (hash) {
+    const id = hash.slice(1);
+    const section = document.getElementById(id);
+    scrollToElement(section);
+  }
+}
+
+function scrollToElement(el) {
+  const offs = 0;
+  const y = el.getBoundingClientRect().top + window.scrollY + offs;
+  window.scrollTo({ top: y, behavior: 'smooth' });
+}
+
+function goNextSection() {
+  const goNextBtns = document.querySelectorAll('.js-go-next');
+  const sectionsList = document.querySelectorAll('section');
+
+  goNextBtns.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const btnParentNode = btn.closest('section');
+      let sectionToScrollTo;
+      sectionsList.forEach((el, index) => {
+        if (el === btnParentNode) {
+          sectionToScrollTo = sectionsList[index + 1];
+          scrollToElement(sectionToScrollTo);
+        }
+      });
+    });
+  });
 }
